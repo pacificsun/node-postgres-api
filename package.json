@@ -2,10 +2,11 @@
   "name": "postgres-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node index",
-    "dev":"nodemon index"
+    "start": "node app",
+    "dev":"nodemon app"
   },
   "author": "Suraj Thapa",
   "license": "ISC",
