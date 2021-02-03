@@ -2,8 +2,8 @@ import express, { json } from "express";
 import morgan from "morgan";
 
 // Importing Routes
-import projectRoutes from "./src/routes/projects";
-import taskRoutes from "./src/routes/projects";
+import projectRoutes from "./src/routes/projects.js";
+// import taskRoutes from "./src/routes/projects";
 
 // Initialization
 const app = express();
@@ -16,6 +16,7 @@ app.use(json);
 // routes use
 
 app.use("api/projects", projectRoutes);
-app.use("api/tasks", taskRoutes);
+// app.use("api/tasks", taskRoutes);
 
-app.listen(3000, () => console.log("running"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`App is running on PORT ${PORT}`));
