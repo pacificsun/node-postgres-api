@@ -1,8 +1,8 @@
-import { Router } from "express";
+const Router = require("express/lib/router");
 
 const router = Router();
 
-import { createProject } from "../controllers/project.controller.js";
+const { createProject } = require("../controllers/project.controller");
 
 // /api/projects/
 router.post("/", createProject);
